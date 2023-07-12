@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int i,start,end,rep;
+    printf("Size of array : ");
+    scanf("%d",&i);
+    int a[i];
+    printf("Enter %d array elements : ",i);
+    for(int j = 0;j < i;j++)
+    {
+        scanf("%d",&a[j]);
+    }
+    printf("Enter Start and End : ");
+    scanf("%d %d",&start,&end);
+    for(int k = start;k < end;k++,end--)    
+    {
+        rep = a[k];
+        a[k] = a[end];
+        a[end] = rep;
+    }
+    for(int j = 0;j < i;j++)
+    {
+        printf("%d",a[j]);
+    }
+}
